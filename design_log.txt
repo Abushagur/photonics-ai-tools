@@ -1,0 +1,39 @@
+Category: Optical Fiber
+Problem: I need a single-mode fiber for 1550nm DWDM transmission over 100km with minimum splice loss
+Params: {}
+---
+Category: Fabry-Perot Cavity
+Problem: I need a narrowband filter for selecting a single WDM channel at 1550nm with minimum crosstalk from adjacent channels spaced 0.8nm apart
+Params: {}
+---
+Category: Ray Optics System
+Problem: I need to collimate a laser diode beam and couple it into a single-mode fiber efficiently
+Params: {}
+---
+Category: Optical Fiber
+Problem: i need a single mode fiber 1550nm dwdm over 100km
+
+Params: {}
+---
+Category: Gaussian Beam
+Problem: I need to focus a 1550nm laser beam to couple into a single-mode fiber with 4.5um core radius
+Params: {}
+---
+Category: WDM System
+Problem: I need to design a DWDM link for 100km with 8 channels at 10Gbps each using standard SMF-28 fiber
+Params: {}
+---
+Category: Resonator Stability
+Problem: I need to design a stable laser cavity for a HeNe laser with concave mirrors
+Params: {}
+---
+Category: Optical Fiber
+Problem: 
+Design an optical link that spans 5oo km and operates at 320 GBPS
+Params: {}
+---
+Category: Optical Fiber
+Problem: 
+Design an optical link that spans 5oo km and operates at 320 GBPS. How many DWDM channels required
+Params: {}
+---
