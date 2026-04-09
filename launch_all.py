@@ -7,28 +7,27 @@ print("=" * 60)
 print("  Professor Abushagur AI Tools Launcher")
 print("=" * 60)
 
-# Clean API key
 api_key = os.environ.get("ANTHROPIC_API_KEY", "").replace(" ", "")
 os.environ["ANTHROPIC_API_KEY"] = api_key
 env = os.environ.copy()
 env["ANTHROPIC_API_KEY"] = api_key
 
-# Kill any existing streamlit processes
 subprocess.run(["pkill", "-f", "streamlit"], capture_output=True)
 time.sleep(2)
 
-# Available apps
 apps = [
-    {
-        "name": "Photonics App (backup)",
-        "file": "/Users/mustafaabushagur/photonics_app_v2_backup.py",
-        "port": 8501
-    },
-    {
-        "name": "Research Assistant (51 Papers)",
-        "file": "/Users/mustafaabushagur/research_assistant.py",
-        "port": 8502
-    }
+    {"name": "Applied Photonics Study Assistant", 
+     "file": "/Users/mustafaabushagur/photonics_app_v2_backup.py", 
+     "port": 8501},
+    {"name": "Optical Design Advisor",
+     "file": "/Users/mustafaabushagur/optical_design_advisor.py",
+     "port": 8502},
+    {"name": "Research Assistant (51 Papers)",
+     "file": "/Users/mustafaabushagur/research_assistant.py",
+     "port": 8503},
+    {"name": "APRA Agent",
+     "file": "/Users/mustafaabushagur/apra.py",
+     "port": 8504},
 ]
 
 for app in apps:
@@ -46,6 +45,8 @@ for app in apps:
 
 print()
 print("=" * 60)
-print("  🔬 Photonics App  → http://localhost:8501")
-print("  📚 Research Assistant → http://localhost:8502")
+print("  📖 Applied Photonics    → http://localhost:8501")
+print("  🔭 Optical Design       → http://localhost:8502")
+print("  📚 Research Assistant   → http://localhost:8503")
+print("  🤖 APRA Agent           → http://localhost:8504")
 print("=" * 60)
