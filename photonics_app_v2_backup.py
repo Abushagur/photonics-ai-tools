@@ -31,7 +31,7 @@ with st.sidebar:
 
 @st.cache_resource
 def load_book_and_index():
-    pdf_path = "/Users/mustafaabushagur/Applied_Photonics_Book.pdf"
+    pdf_path = "Applied_Photonics_Book.pdf"
     reader = pypdf.PdfReader(pdf_path)
     pages = []
     for i, page in enumerate(reader.pages):
