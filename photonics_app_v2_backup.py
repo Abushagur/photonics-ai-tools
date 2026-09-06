@@ -10,7 +10,10 @@ st.divider()
 
 with st.sidebar:
     st.header("Setup")
-    api_key = st.text_input("Anthropic API Key", type="password", placeholder="sk-ant-api03-...")
+    try:
+        api_key = st.secrets["ANTHROPIC_API_KEY"]
+    except:
+        api_key = st.text_input("Anthropic API Key", type="password", placeholder="sk-ant-api03-...")
     st.markdown("---")
     st.header("Chapter Filter")
     chapters = {
