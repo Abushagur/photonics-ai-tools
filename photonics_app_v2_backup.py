@@ -119,7 +119,14 @@ else:
                     st.error(f"Error: {e}")
     st.markdown("---")
     st.markdown("### Example questions")
-   examples = ["What is Brewsters angle?", "Explain the V-number", "How does a Fabry-Perot cavity work?", "What is WDM?", "How does a semiconductor laser work?", "What is total internal reflection?"]
+examples = [
+    "What is Brewsters angle?",
+    "Explain the V-number",
+    "How does a Fabry-Perot cavity work?",
+    "What is WDM?",
+    "How does a semiconductor laser work?",
+    "What is total internal reflection?"
+]
 cols = st.columns(3)
 for i, example in enumerate(examples):
     with cols[i % 3]:
@@ -130,9 +137,16 @@ for i, example in enumerate(examples):
             with st.chat_message("assistant"):
                 with st.spinner("Searching your book..."):
                     try:
-                        answer, pages = ask_book(example, collection, api_key, st.session_state.messages[:-1], page_min, page_max)
+                        answer, pages = ask_book(
+                            example, collection, api_key,
+                            st.session_state.messages[:-1],
+                            page_min, page_max
+                        )
                         st.markdown(answer)
                         st.markdown(f"*Pages referenced: {pages}*")
-                        st.session_state.messages.append({"role": "assistant", "content": answer})
+                        st.session_state.messages.append({
+                            "role": "assistant",
+                            "content": answer
+                        })
                     except Exception as e:
                         st.error(f"Error: {e}")
